@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Pearl.Models
@@ -48,7 +49,7 @@ namespace Pearl.Models
 
     public class LoginViewModel
     {
-        [Required]
+        //[Required]
         [Display(Name = "Email")]
         [EmailAddress]
         public string Email { get; set; }
@@ -73,8 +74,27 @@ namespace Pearl.Models
         public string Email { get; set; }
 
         [Display(Name = "User Name"), Required]
-        
         public string UserName { get; set; }
+
+        [Display(Name = "First Name"), Required]
+        public string FirstName { get; set; }
+
+        [Display(Name = "Last Name"), Required]
+        public string LastName { get; set; }
+
+        [Display(Name = "Phone No"), Required]
+        public string PhoneNo { get; set; }
+
+        [Display(Name = "Gender"), Required]
+        public string Gender { get; set; }
+
+        [Display(Name = "Marital Status"), Required]
+        public string MaritalStatus { get; set; }
+
+        [Display(Name = "Date of Birth"), Required]
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yy}", ApplyFormatInEditMode = true)]
+        public DateTime DateOfBirth { get; set; }
+        
 
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
@@ -85,8 +105,11 @@ namespace Pearl.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+                
     }
 
+    
     public class ResetPasswordViewModel
     {
         [Required]

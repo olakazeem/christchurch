@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -151,7 +152,7 @@ namespace Pearl.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email };
+                ApplicationUser user = new ApplicationUser { UserName = model.UserName, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, PhoneNo =model.PhoneNo, Gender = model.Gender, MaritalStatus = model.MaritalStatus, DateofBirth = model.DateOfBirth};
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -183,6 +184,18 @@ namespace Pearl.Controllers
             }
             var result = await UserManager.ConfirmEmailAsync(userId, code);
             return View(result.Succeeded ? "ConfirmEmail" : "Error");
+        }
+
+        // GET: /Account/ConfirmPhoneNo
+        [AllowAnonymous]
+        public async Task<ActionResult> ConfirmPhoneNo(string userId, string code)
+        {
+            if (userId == null || code == null)
+            {
+                return View("Error");
+            }
+            var result = await UserManager.ConfirmEmailAsync(userId, code);
+            return View(result.Succeeded ? "ConfirmPhoneNo" : "Error");
         }
 
         //
@@ -421,6 +434,40 @@ namespace Pearl.Controllers
             }
 
             base.Dispose(disposing);
+        }
+        private IEnumerable<string> MaritalStatus()
+        {
+            return new List<string>
+            {
+                "Married",
+                "Divorced",
+                "Single",
+                "Separated",
+                "Widowed",
+                "Widowered",
+                
+            };
+        }
+
+        private IEnumerable<SelectListItem> GetSelectListItems(IEnumerable<string> elements)
+        {
+            // Create an empty list to hold result of the operation
+            var selectList = new List<SelectListItem>();
+
+            // For each string in the 'elements' variable, create a new SelectListItem object
+            // that has both its Value and Text properties set to a particular value.
+            // This will result in MVC rendering each item as:
+            //     <option value="State Name">State Name</option>
+            foreach (var element in elements)
+            {
+                selectList.Add(new SelectListItem
+                {
+                    Value = element,
+                    Text = element
+                });
+            }
+
+            return selectList;
         }
 
         #region Helpers

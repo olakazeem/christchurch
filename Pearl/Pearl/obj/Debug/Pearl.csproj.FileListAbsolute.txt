@@ -103,3 +103,10 @@ C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pe
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.csproj.CopyComplete
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.dll
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.pdb
+C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.Migrations.Initial.resources
+C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.csproj.GenerateResource.cache
+C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.Migrations.addfirstname.resources
+C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.Migrations.addlastname.resources
+C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.Migrations.addphoneno.resources
+C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.Migrations.addgender.resources
+C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.Migrations.addmatitalstatus.resources
