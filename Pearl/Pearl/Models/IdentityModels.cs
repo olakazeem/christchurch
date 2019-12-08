@@ -39,6 +39,12 @@ namespace Pearl.Models
 
     }
 
+    public class ApplicationRole : IdentityRole
+    {
+        public ApplicationRole() : base() {}
+        public ApplicationRole(string roleName) : base(roleName) { }
+    }
+
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
@@ -46,9 +52,14 @@ namespace Pearl.Models
         {
         }
 
+        public DbSet<Member> Members { get; set; }
+        
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+        
     }
 }
