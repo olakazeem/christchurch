@@ -11,6 +11,9 @@ namespace Pearl.Models
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
+        //[Display(Name = "Role Name"), Required]
+        //public string RoleName { get; set; }
+
         [Display(Name = "First Name"),Required]
         public string FirstName { get; set; }
 
@@ -51,9 +54,6 @@ namespace Pearl.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-
-        public DbSet<Member> Members { get; set; }
-        
 
         public static ApplicationDbContext Create()
         {

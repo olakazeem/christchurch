@@ -98,6 +98,7 @@ C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\bin\Microsof
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.csprojAssemblyReference.cache
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.csproj.CoreCompileInputs.cache
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.csproj.CopyComplete
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.dll
@@ -111,7 +112,3 @@ C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pe
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.Migrations.addmatitalstatus.resources
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.Migrations.role.resources
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.Migrations.role1.resources
-C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.Migrations.member.resources
-C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.Migrations.memeber.resources
-C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.Migrations.memeber1.resources
-C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl\Pearl\obj\Debug\Pearl.csprojAssemblyReference.cache

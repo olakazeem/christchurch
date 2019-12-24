@@ -170,7 +170,7 @@ namespace Pearl.Controllers
         {
             if (ModelState.IsValid)
             {
-                ApplicationUser user = new ApplicationUser { UserName = model.UserName, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, PhoneNo =model.PhoneNo, Gender = model.Gender, MaritalStatus = model.MaritalStatus, DateofBirth = model.DateOfBirth};
+                ApplicationUser user = new ApplicationUser { UserName = model.UserName,RoleName=model.RoleName, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, PhoneNo =model.PhoneNo, Gender = model.Gender, MaritalStatus = model.MaritalStatus, DateofBirth = model.DateOfBirth};
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

@@ -51,8 +51,6 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -174,7 +172,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -211,24 +208,10 @@
     <Compile Include="Migrations\201912080438180_role1.Designer.cs">
       <DependentUpon>201912080438180_role1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912080704195_member.cs" />
-    <Compile Include="Migrations\201912080704195_member.Designer.cs">
-      <DependentUpon>201912080704195_member.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201912080738258_memeber.cs" />
-    <Compile Include="Migrations\201912080738258_memeber.Designer.cs">
-      <DependentUpon>201912080738258_memeber.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201912080759598_memeber1.cs" />
-    <Compile Include="Migrations\201912080759598_memeber1.Designer.cs">
-      <DependentUpon>201912080759598_memeber1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Lga.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Members.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -7736,7 +7719,6 @@
     <Content Include="bootstrap\package.json" />
     <Content Include="bootstrap\README.md" />
     <None Include="Properties\PublishProfiles\christchurch - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\rccgchristchurch - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -7752,7 +7734,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -7791,11 +7775,6 @@
     <Content Include="Views\Role\Edit.cshtml" />
     <Content Include="Views\Role\Details.cshtml" />
     <Content Include="Views\Role\Delete.cshtml" />
-    <Content Include="Views\Member\Create.cshtml" />
-    <Content Include="Views\Member\Delete.cshtml" />
-    <Content Include="Views\Member\Details.cshtml" />
-    <Content Include="Views\Member\Edit.cshtml" />
-    <Content Include="Views\Member\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -7813,7 +7792,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="AdminLTE\bower_components\fullcalendar\dist\fullcalendar.d.ts" />
@@ -7843,15 +7821,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912080438180_role1.resx">
       <DependentUpon>201912080438180_role1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912080704195_member.resx">
-      <DependentUpon>201912080704195_member.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912080738258_memeber.resx">
-      <DependentUpon>201912080738258_memeber.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912080759598_memeber1.resx">
-      <DependentUpon>201912080759598_memeber1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
