@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 using Pearl.Models;
 
 namespace Pearl.Controllers
@@ -16,9 +17,32 @@ namespace Pearl.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Member
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(string option, string search)
         {
-            return View(await db.Members.ToListAsync());
+            //if a user choose the radio button option as Subject  
+            if (option == "First Name")
+            {
+                //Index action method will return a view with a student records based on what a user specify the value in textbox  
+                return View(db.Members.Where(x => x.mFirstname == search || search == null).ToList());
+            }
+            else if (option == "Last Name")
+            {
+                return View(db.Members.Where(x => x.mSurname == search || search == null).ToList());
+            }
+            else if (option == "E-Mail")
+            {
+                return View(db.Members.Where(x => x.mEmail == search || search == null).ToList());
+            }
+            else if (option == "Phone No")
+            {
+                return View(db.Members.Where(x => x.mPhoneNo1 == search || search == null).ToList());
+            }
+            else
+            {
+                return View(await db.Members.ToListAsync());
+                //return View(db.Members.Where(x => x.mFirstname.StartsWith(search) || search == null).ToList());
+            }
+
         }
 
         // GET: Member/Details/5
@@ -53,9 +77,19 @@ namespace Pearl.Controllers
             {
                 db.Members.Add(member);
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                //this.TempData["messages"] = "Success!";
+                //return RedirectToAction("/Member/Success");
+                //ViewBag.Message = "Record Submitted";
+                //return RedirectToAction("Home/About");
+                // TempData["Success"] = "Member created successfully";
+
+                // return this.Redirect("www.rccgchristchurch.org");
+                return this.PartialView("_Success");
+
             }
 
+
+            TempData["Success"] = "Member created successfully";
             return View(member);
         }
 
@@ -85,7 +119,9 @@ namespace Pearl.Controllers
             {
                 db.Entry(member).State = EntityState.Modified;
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                this.TempData["messages"] = "Success!";
+                //return RedirectToAction("/Member/Success");
+                ViewBag.Message = "Record Submitted";
             }
             return View(member);
         }
@@ -124,5 +160,35 @@ namespace Pearl.Controllers
             }
             base.Dispose(disposing);
         }
+        // GET: Department
+        public ActionResult Dept()
+        {
+            ChurchEntities myEntities = new ChurchEntities();
+            var dept = myEntities.Departments.ToList();
+            SelectList list = new SelectList(dept, "DeptId", "DeptName");
+            ViewBag.DeptListname = list;
+            return View();
+        }
+
+
     }
-}
+    public partial class CS : System.Web.UI.Page
+    {
+        protected void Save(object sender, EventArgs e)
+        {
+            //Insert record here.
+
+            //Display success message.
+            string message = "Your details have been saved successfully.";
+            string script = "window.onload = function(){ alert('";
+            script += message;
+            script += "')};";
+            ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+        }
+    }
+
+
+    }
+
+
+

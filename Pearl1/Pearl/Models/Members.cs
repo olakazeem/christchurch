@@ -27,7 +27,7 @@ namespace Pearl.Models
         [StringLength(150)]
         public string mFirstname { get; set; }
 
-        [Display(Name = "Other Name"), Required]
+        [Display(Name = "Other Name")]
         [StringLength(150)]
         public string mOthername { get; set; }
 
@@ -119,7 +119,7 @@ namespace Pearl.Models
         [StringLength(3)]
         public string mAltarCall { get; set; }        
         
-        [Display(Name = "Church Where you responded to Altar Call")]
+        [Display(Name = "Department 2")]
         [StringLength(50)]
         public string mAltarCallChurch { get; set; }       
 
@@ -156,6 +156,28 @@ namespace Pearl.Models
         [StringLength(350)]
         public string mSuggestion { get; set; }
         
+
+    }
+    public static class MyAlerts
+    {
+        public const string SUCCESS = "success";
+        public const string ATTENTION = "attention";
+        public const string ERROR = "error";
+        public const string INFORMATION = "info";
+
+        public static string[] ALL
+        {
+            get
+            {
+                return new[]
+                           {
+                           SUCCESS,
+                           ATTENTION,
+                           INFORMATION,
+                           ERROR
+                       };
+            }
+        }
 
     }
 }

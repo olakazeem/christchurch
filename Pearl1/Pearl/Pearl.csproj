@@ -181,7 +181,24 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\ChurchModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChurchModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChurchModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChurchModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChurchModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChurchModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Department.cs">
+      <DependentUpon>ChurchModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Lga.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -6828,6 +6845,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\ChurchModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ChurchModel.edmx</DependentUpon>
+      <LastGenOutput>ChurchModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ChurchModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ChurchModel.edmx</DependentUpon>
+      <LastGenOutput>ChurchModel.cs</LastGenOutput>
+    </Content>
     <Content Include="plugins\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="plugins\bootstrap-slider\slider.css" />
     <Content Include="plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.js" />
@@ -7774,6 +7801,13 @@
     <Content Include="Content\bootstrap\alerts.less" />
     <Content Include="Content\_bootstrap-datetimepicker.less" />
     <Content Include="Content\bootstrap-datetimepicker-build.less" />
+    <EntityDeploy Include="Models\ChurchModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ChurchModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ChurchModel.edmx.diagram">
+      <DependentUpon>ChurchModel.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\christchurch - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\christchurch - Web Deploy1.pubxml" />
     <None Include="Properties\PublishProfiles\rccgchristchurch - Web Deploy.pubxml" />
@@ -7840,6 +7874,9 @@
     <Content Include="Views\Member\Details.cshtml" />
     <Content Include="Views\Member\Edit.cshtml" />
     <Content Include="Views\Member\Index.cshtml" />
+    <Content Include="Views\Member\Sucess.cshtml" />
+    <Content Include="Views\Shared\_Success.cshtml" />
+    <Content Include="Views\Shared\MyLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
