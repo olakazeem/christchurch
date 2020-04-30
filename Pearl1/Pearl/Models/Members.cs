@@ -68,16 +68,16 @@ namespace Pearl.Models
         public string mLGA { get; set; }
 
         [Display(Name = "E-Mail"), Required]
-        [StringLength(250)]
+        [StringLength(150)]
         public string mEmail { get; set; }
 
         [Display(Name = "Phone 1"), Required]
         [StringLength(14)]
         public string mPhoneNo1 { get; set; }
 
-        [Display(Name = "Phone 2")]
+        [Display(Name = "WhatsApp No")]
         [StringLength(14)]
-        public string mPhoneNo2 { get; set; }       
+        public string mPhoneNo2 { get; set; }
 
         [Display(Name = "Anniversary Day")]
         [StringLength(3)]
@@ -126,10 +126,6 @@ namespace Pearl.Models
         [Display(Name = "Baptismal Type")]
         [StringLength(50)]
         public string mBaptismalType { get; set; }
-
-        [Display(Name = "Are you endowed with Spiritual Gift(s)")]
-        [StringLength(3)]
-        public string mGift { get; set; }
 
         [Display(Name = "Spouse Phone 1")]
         [StringLength(14)]

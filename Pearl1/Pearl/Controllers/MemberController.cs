@@ -17,25 +17,25 @@ namespace Pearl.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Member
-        public async Task<ActionResult> Index(string option, string search)
+        public async Task<ActionResult> Index(string option, string searchstring)
         {
             //if a user choose the radio button option as Subject  
             if (option == "First Name")
             {
                 //Index action method will return a view with a student records based on what a user specify the value in textbox  
-                return View(db.Members.Where(x => x.mFirstname == search || search == null).ToList());
+                return View(db.Members.Where(x => x.mFirstname == searchstring || searchstring == null).ToList());
             }
             else if (option == "Last Name")
             {
-                return View(db.Members.Where(x => x.mSurname == search || search == null).ToList());
+                return View(db.Members.Where(x => x.mSurname == searchstring || searchstring == null).ToList());
             }
             else if (option == "E-Mail")
             {
-                return View(db.Members.Where(x => x.mEmail == search || search == null).ToList());
+                return View(db.Members.Where(x => x.mEmail == searchstring || searchstring == null).ToList());
             }
             else if (option == "Phone No")
             {
-                return View(db.Members.Where(x => x.mPhoneNo1 == search || search == null).ToList());
+                return View(db.Members.Where(x => x.mPhoneNo1 == searchstring || searchstring == null).ToList());
             }
             else
             {
@@ -71,7 +71,7 @@ namespace Pearl.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "MemberID,mTitle,mSurname,mFirstname,mOthername,mGender,mMaritalStatus,mDay,mMonth,mAgeGroup,mAddress,mArea,mNearestBustop,mLGA,mEmail,mPhoneNo1,mPhoneNo2,mAnnivDay,mAnnivMonth,mSpoueAttending,mSpouseName,mSpouseEmail,mEmployerName,mEmployerAddress,mProfession,mSpouseProfession,mAltarCall,mAltarCallChurch,mBaptized,mBaptismalType,mGift,mSpousePhone1,mSpousePhone2,mWorker,mDept,mAreaOfInterest,mSuggestion")] Member member)
+        public async Task<ActionResult> Create([Bind(Include = "MemberID,mTitle,mSurname,mFirstname,mOthername,mGender,mMaritalStatus,mDay,mMonth,mAgeGroup,mAddress,mArea,mNearestBustop,mLGA,mEmail,mPhoneNo1,mPhoneNo2,mAnnivDay,mAnnivMonth,mSpoueAttending,mSpouseName,mSpouseEmail,mEmployerName,mEmployerAddress,mProfession,mSpouseProfession,mAltarCall,mAltarCallChurch,mBaptized,mBaptismalType,mSpousePhone1,mSpousePhone2,mWorker,mDept,mAreaOfInterest,mSuggestion")] Member member)
         {
             if (ModelState.IsValid)
             {
@@ -113,7 +113,7 @@ namespace Pearl.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "MemberID,mTitle,mSurname,mFirstname,mOthername,mGender,mMaritalStatus,mDay,mMonth,mAgeGroup,mAddress,mArea,mNearestBustop,mLGA,mEmail,mPhoneNo1,mPhoneNo2,mAnnivDay,mAnnivMonth,mSpoueAttending,mSpouseName,mSpouseEmail,mEmployerName,mEmployerAddress,mProfession,mSpouseProfession,mAltarCall,mAltarCallChurch,mBaptized,mBaptismalType,mGift,mSpousePhone1,mSpousePhone2,mWorker,mDept,mAreaOfInterest,mSuggestion")] Member member)
+        public async Task<ActionResult> Edit([Bind(Include = "MemberID,mTitle,mSurname,mFirstname,mOthername,mGender,mMaritalStatus,mDay,mMonth,mAgeGroup,mAddress,mArea,mNearestBustop,mLGA,mEmail,mPhoneNo1,mPhoneNo2,mAnnivDay,mAnnivMonth,mSpoueAttending,mSpouseName,mSpouseEmail,mEmployerName,mEmployerAddress,mProfession,mSpouseProfession,mAltarCall,mAltarCallChurch,mBaptized,mBaptismalType,mSpousePhone1,mSpousePhone2,mWorker,mDept,mAreaOfInterest,mSuggestion")] Member member)
         {
             if (ModelState.IsValid)
             {

@@ -220,3 +220,5 @@ C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl1\Pearl\obj\Release
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl1\Pearl\obj\Release\Pearl.csproj.CopyComplete
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl1\Pearl\obj\Release\Pearl.dll
 C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl1\Pearl\obj\Release\Pearl.pdb
+C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl1\Pearl\obj\Release\Pearl.Migrations.AddWhatsAppNoToMemebrs.resources
+C:\Users\oladimeji.kazeem\Documents\GitHub\christchurch\Pearl1\Pearl\obj\Release\Pearl.csproj.GenerateResource.cache

@@ -26,7 +26,12 @@
                 new SelectListItem{Text = "Miss", Value = "Miss"},
                 new SelectListItem{Text = "Dr", Value = "Dr"},
                 new SelectListItem{Text = "Prof", Value = "Prof"},
-                new SelectListItem{Text = "Chief", Value = "Chief"}
+                new SelectListItem{Text = "Chief", Value = "Chief"},
+                new SelectListItem{Text = "Pst", Value = "Pst"},
+                new SelectListItem{Text = "AP", Value = "AP"},
+                new SelectListItem{Text = "Dcn", Value = "Dcn"},
+                new SelectListItem{Text = "Dcns", Value = "Dcns"}
+
             }, "Select Title", new {  htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.mTitle, "", new { @class = "text-danger" })
 
@@ -194,7 +199,7 @@
                     new SelectListItem{Text = "Bariga - Ilaje", Value = "Bariga - Ilaje"},
                     new SelectListItem{Text = "Bariga - Pedro", Value = "Bariga - Pedro"},
                     new SelectListItem{Text = "Berger - Ojodu", Value = "Berger - Ojodu"},
-                    new SelectListItem{Text = "Dolphin", Value = "Dolphin"},
+                    new SelectListItem{Text = "Dolphin Estate", Value = "Dolphin"},
                     new SelectListItem{Text = "Dopemu", Value = "Dopemu"},
                     new SelectListItem{Text = "Egbe", Value = "Egbe"},
                     new SelectListItem{Text = "Egbeda", Value = "Egbeda"},

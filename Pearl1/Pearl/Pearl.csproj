@@ -179,8 +179,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004101413032_AddWhatsAppNoToMemebrs.cs" />
+    <Compile Include="Migrations\202004101413032_AddWhatsAppNoToMemebrs.Designer.cs">
+      <DependentUpon>202004101413032_AddWhatsAppNoToMemebrs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Attendance.cs" />
     <Compile Include="Models\ChurchModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -7808,8 +7813,11 @@
     <Content Include="Models\ChurchModel.edmx.diagram">
       <DependentUpon>ChurchModel.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\christchurch - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\christchurch - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\christchurch - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\christchurch - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\christchurch - Web Deploy2.pubxml" />
     <None Include="Properties\PublishProfiles\rccgchristchurch - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -7899,6 +7907,11 @@
   <ItemGroup>
     <TypeScriptCompile Include="AdminLTE\bower_components\fullcalendar\dist\fullcalendar.d.ts" />
     <TypeScriptCompile Include="AdminLTE\bower_components\moment\moment.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004101413032_AddWhatsAppNoToMemebrs.resx">
+      <DependentUpon>202004101413032_AddWhatsAppNoToMemebrs.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
