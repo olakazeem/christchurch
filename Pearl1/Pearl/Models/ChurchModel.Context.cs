@@ -26,5 +26,7 @@ namespace Pearl.Models
         }
     
         public virtual DbSet<Department> Departments { get; set; }
+
+        public System.Data.Entity.DbSet<Pearl.Models.Member> Members { get; set; }
     }
 }

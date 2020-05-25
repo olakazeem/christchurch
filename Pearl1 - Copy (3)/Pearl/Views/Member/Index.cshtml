@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Pearl.Models.Member>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of Members</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+    //the following are search options
+    <b> Search Option: </b> @Html.RadioButton("option", "First Name")   <text>FirstName</text> @Html.RadioButton("option", "Last Name") <text> Last Name </text>
+    @Html.RadioButton("option", "E-Mail")<text>E-Mail</text> @Html.RadioButton("option", "Phone No")<text>Phone No</text> @Html.TextBox("search") <input type="submit" name="submit" value="Search" />
+}
+<p></p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.mTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mSurname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mFirstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mOthername)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mGender)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.mEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mPhoneNo1)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.mTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mSurname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mFirstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mOthername)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mGender)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.mEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mPhoneNo1)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MemberID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MemberID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MemberID })
+            </td>
+        </tr>
+    }
+
+</table>

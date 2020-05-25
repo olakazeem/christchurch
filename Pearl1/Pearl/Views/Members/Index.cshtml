@@ -1,0 +1,232 @@
+﻿@model IEnumerable<Pearl.Models.Member>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LoginPartial.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.mTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mSurname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mFirstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mOthername)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mGender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mMaritalStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mMonth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mAgeGroup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mArea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mNearestBustop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mLGA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mPhoneNo1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mPhoneNo2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mAnnivDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mAnnivMonth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mSpoueAttending)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mSpouseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mSpouseEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mEmployerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mEmployerAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mProfession)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mSpouseProfession)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mAltarCall)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mAltarCallChurch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mBaptismalType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mSpousePhone1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mSpousePhone2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mWorker)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mDept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mAreaOfInterest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mSuggestion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.mTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mSurname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mFirstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mOthername)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mGender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mMaritalStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mMonth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mAgeGroup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mArea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mNearestBustop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mLGA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mPhoneNo1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mPhoneNo2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mAnnivDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mAnnivMonth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mSpoueAttending)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mSpouseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mSpouseEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mEmployerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mEmployerAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mProfession)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mSpouseProfession)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mAltarCall)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mAltarCallChurch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mBaptismalType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mSpousePhone1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mSpousePhone2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mWorker)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mDept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mAreaOfInterest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mSuggestion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MemberID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MemberID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MemberID })
+        </td>
+    </tr>
+}
+
+</table>
